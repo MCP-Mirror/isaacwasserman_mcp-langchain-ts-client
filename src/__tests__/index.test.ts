@@ -9,8 +9,8 @@ const serverParams = {
   ]
 }
 
-const toolkit = new MCPToolkit();
-await toolkit.initialize(serverParams);
+const toolkit = new MCPToolkit(serverParams);
+await toolkit.initialize();
 
 const toolsByName = toolkit.tools.reduce((acc, tool) => {
   acc[tool.name] = tool;
